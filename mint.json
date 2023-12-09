@@ -31,6 +31,12 @@
         "url": "https://www.kado.money/blog"
       }
     ],
+    "tabs": [
+      {
+          "name": "References",
+          "url": "references"
+      }
+  ],
     "navigation": [
         {
             "group": "Getting Started",
@@ -44,23 +50,6 @@
               "kado-products/kado-on-ramp",
               "kado-products/kado-off-ramp",
               "kado-products/kado-swap"
-            ]
-          },
-          {
-            "group": "Integrations",
-            "pages": [
-              {
-                "group": "Integrate Kado",
-                "pages": [
-                  "integrations/integrate-kado",
-                  "integrations/integrate-kado/the-widget",
-                  "integrations/integrate-kado/the-hybrid-api",
-                  "integrations/integrate-kado/sandbox"
-                ]
-              },
-              "integrations/customizing-your-integration",
-              "integrations/best-practices",
-              "integrations/data-and-analytics"
             ]
           },
           {
