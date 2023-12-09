@@ -1,0 +1,89 @@
+---
+title: "Sandbox"
+description: "⚒"
+---
+
+## Environment
+
+The Kado Sandbox provides a safe space for integrators to try out their integration, without spending money or using real data. 
+
+The sandbox can be located at:
+
+* Frontend widget: [https://sandbox--kado.netlify.app/](https://sandbox--kado.netlify.app/)
+
+* API: https://test-api.kado.money
+
+## Sign Up
+
+To create an account in sandbox, you will need access to the email you are creating the account with (for OTP sign in). 
+
+If you wish to create multiple users with a single email address, you can add a `+` to your email account to receive emails to the original destination. For example, if your email is `test@example.com`, you can also create `test+1@example.com` and `test+2@example.com`, and all OTP codes for those users will show up at the `test@example.com` address. 
+
+## KYC
+
+Once you've signed up, you'll need to KYC to be able to test the on/off ramps. In the sandbox widget, continue on to the KYC process and select "USA" as your region. 
+
+![](/images/integrations/integrate-kado/Screenshot%202023-09-18%20at%203.10.17%20PM.png)
+
+After selecting "USA", a Plaid KYC widget will pop up prompting you for more information. Make sure to copy the phone number from the upper right side of the screen to autofill the rest of the KYC data and get accepted. 
+
+![](/images/integrations/integrate-kado/Screenshot%202023-09-18%20at%203.11.54%20PM.png)
+
+#### Approve KYC via API in Sandbox
+
+If you just need a KYC'd user to test on/off-ramping, you can also sign up in the UI and then use the following API route to enable that user:
+
+post
+
+https://test-api.kado.money
+
+/v1/fortress/passwordless-test-user/enable
+
+\[Sandbox Only\] Approve User KYC via API
+
+## Add Payment Methods
+
+Once you are KYC'd, you're free to start ramping. You can use the following payment method information to make successful on/off-ramps:
+
+**Credit Card:**
+
+* Name: `Test Credit`
+
+* Number: `4242 4242 4242 4242`
+
+* Expiration: `01/25`
+
+* CVV: `123`
+
+**Debit Card:**
+
+* Name: `Test Debit`
+
+* Number: `4659 1055 6905 1157`
+
+* Expiration: `01/25`
+
+* CVV: `123`
+
+More test cards for different scenarios can be found [here](https://www.checkout.com/docs/developer-resources/testing/test-cards).
+
+**ACH:**
+
+* Select any bank
+
+* username: `user_good`
+
+* password: `pass_good`
+
+* OTP: `1111`
+
+## Supported Chains
+
+Kado enables Sandbox disbursements and on-ramp tests for the following assets:
+
+| Asset | Blockchain             |
+| ----- | ---------------------- |
+| USDC  | Avalanche Fuji C-Chain |
+| AVAX  | Avalanche Fuji C-Chain |
+| USDC  | Stellar Testnet        |
+| XLM   | Stellar Testnet        |

@@ -1,0 +1,79 @@
+{
+    "name": "Kado",
+    "logo": {
+      "light": "/logo/light.png",
+      "dark": "/logo/dark.png"
+    },
+    "favicon": "/favicon.svg",
+    "colors": {
+      "primary": "#2566E4",
+      "light": "#4D82E8",
+      "dark": "#2566E4"
+    },
+    "topbarCtaButton": {
+      "name": "Launch App",
+      "url": "https://app.kado.money/"
+    },
+    "anchors": [
+      {
+        "name": "FAQ",
+        "icon": "block-question",
+        "url": "https://faq.kado.money/en/"
+      },
+      {
+        "name": "Reports",
+        "icon": "list",
+        "url": "https://www.kado.money/reports"
+      },
+      {
+        "name": "Blog",
+        "icon": "newspaper",
+        "url": "https://www.kado.money/blog"
+      }
+    ],
+    "navigation": [
+        {
+            "group": "Getting Started",
+            "pages": [
+              "introduction"
+            ]
+          },
+          {
+            "group": "Kado Products",
+            "pages": [
+              "kado-products/kado-on-ramp",
+              "kado-products/kado-off-ramp",
+              "kado-products/kado-swap"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              {
+                "group": "Integrate Kado",
+                "pages": [
+                  "integrations/integrate-kado",
+                  "integrations/integrate-kado/the-widget",
+                  "integrations/integrate-kado/the-hybrid-api",
+                  "integrations/integrate-kado/sandbox"
+                ]
+              },
+              "integrations/customizing-your-integration",
+              "integrations/best-practices",
+              "integrations/data-and-analytics"
+            ]
+          },
+          {
+            "group": "References",
+            "pages": [
+              "references/upcoming-features",
+              "references/faqs-and-coverage"
+            ]
+          }
+    ],
+    "footerSocials":
+      {
+          "twitter": "https://twitter.com/kado_money?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+          "linkedin": "https://www.linkedin.com/company/kado-software/"
+      }
+  }

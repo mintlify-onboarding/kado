@@ -1,0 +1,57 @@
+---
+title: "Best Practices"
+description: "👍"
+---
+
+
+
+## Where should I put my widget?
+
+#### Place the widget in places where a user might see their asset overviews
+
+* In dashboards
+
+* In asset lists
+
+![](/images/integrations/image.png)
+
+
+**Place the widget in places where a user might need to top up their crypto in preparation for an action**
+
+* Staking
+
+* Pooling
+
+* Swapping, etc
+
+#### Place the widget in places where a user might need to top up their crypto in the moment
+
+* When a user does not have enough for a web3 action  
+   * _Example: User wants to do a swap on your app for 1500 USDC to 1 ETH, but only has 1300 USDC available in their wallet_  
+   * _When the user clicks Swap and you've detected they have insufficient funds, call the Kado Ramp widget with params:_  
+         * _`amount = 200`_ _(the difference in amount)_  
+         * _`onRevCurrency = USDC`_ _(the asset that the user is missing)_  
+         * _`wallet = [their connected user wallet]`_ _(sent directly to their connected wallet)_
+
+#### Place the widget in places that a user might want to get their crypto back into fiat
+
+* When a user wants to lock in crypto profits  
+   * For DEXs or any apps where you can "sell" crypto into Kado-supported crypto assets  
+         * _Example: User sells their 1 ETH for 1500 USDC_  
+         * _Place the widget near the sell button or sell confirmation screen where they can then get their crypto back into their bank account_  
+   * For staking, vault based protocols, or any apps that you can "harvest" crypto into Kado-supported assets  
+         * _Example: User has a position farming for USDC rewards. Every week, they "harvest" their rewards and lock in their earned USDC_  
+         * _Place the widget near the harvest button or confirmation where they can then off-ramp their harvest rewards back into fiat_
+
+## Sizing 
+
+* Test to ensure optimal widget placement to make sure that everything fits where you want it to
+
+## Testing
+
+* Test in your staging environments to make sure things are working how you want them to before pushing to production
+
+## How should I close my widget?
+
+* Make sure the widget does not close when a user clicks off of the widget - confine the close action to a close button or other explicit action. Otherwise, this could lead to users losing their progress and having to re-enter their information
+
